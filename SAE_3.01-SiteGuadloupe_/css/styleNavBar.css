@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 140px;
+}
+
+
+.disparitionNav{
+    top: -100%;
+}
+
+
+nav{
+    z-index: 2;
+    font-family:'Bebas Neue', monospace;
+    transition: 0.8s;
+    top: 0;
+    position: fixed;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+}
+
+
+.navBar a{
+    color: black;
+    font-size: 1.3em;
+}
+
+nav .logo{
+    height:inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+}
+
+nav .logo img{
+    height:60px;
+
+}
+
+.nav-links{
+    height: inherit;
+}
+.navBar .nav-links ul{
+    display: flex;
+    height: inherit;
+    justify-content: center;
+}
+.navBar .nav-links a{
+    padding: 30px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navBar .nav-links ul a:hover{
+    background-color:#fe8989;
+}
+
+.navBar .menu-burger{
+    transition: 0.5s cubic-bezier(0.51, 0.01, 0, 1.45);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    padding: 15px;
+    height: inherit ;
+    display: none;
+}
+
+.navBar .menu-burger:hover{
+    transform: rotate(180deg);
+    translate :0 -50%;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+
+
+
+
+
+/*navBar*/
+@media screen and (max-width: 860px) {
+    .navBar .menu-burger{
+        display: block;
+    }
+    nav{
+        padding: 0;
+        justify-content:space-between;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.349);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(2px);
+        right: -100%;
+        transition: 0.5s ease;
+    }
+    .nav-links.apparitionNavMobile{
+        right: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBar .nav-links ul li{
+        margin: 30px 0;
+        height: auto;
+    }
+    .navBar .logo{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+}
+
+

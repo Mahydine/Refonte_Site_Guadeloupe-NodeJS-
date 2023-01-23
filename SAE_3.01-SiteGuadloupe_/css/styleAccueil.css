@@ -1,0 +1,414 @@
+main {
+    background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
+}
+
+#ContenuAccueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------ ACCES RAPIDES ------------------------------ */
+#AccueilSectionHeadAccesRapide {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(60, 228, 38);
+    width: 200px;
+    height: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: -90px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+
+.AccesRapideHover{
+    margin: 0px 0px 0px 180px;
+}
+
+.AccesRapideDisable{
+    margin: 0px 0px 0px -180px;
+}
+
+#AccueilSectionHeadAccesRapide h2 {
+    margin-left: 10%;
+    margin-top: 10%;
+    font-family: 'Whitney Bold';
+    font-size: 23px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
+    padding: 10px 0px 10px 0px;
+}
+
+#AccueilSectionHeadAccesRapide ul {
+    margin-left: 18%;
+    display: flex;
+    flex-direction: column;
+}
+
+#AccueilSectionHeadAccesRapide li {
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+}
+
+#AccueilSectionHeadAccesRapide a {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.302);
+    font-family: 'Whitney Book';
+}
+
+/* ------------------------------ SECTION HEAD ------------------------------ */
+#AccueilSectionHead{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5) url("../images/BasseTerrePictureMain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    height: 300px;
+}
+
+
+#AccueilSectionHead h1 {
+    width: 90%;
+    text-align: center;
+    font-family: 'BoldFont';
+    font-size: 87px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
+    margin-bottom: 10px;
+}
+
+#AccueilSectionHead h2 {
+    width: 90%;
+    text-align: center;
+    font-family: 'BoldFont';
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
+}
+
+.AccueilSectionHeadFlechesScroll {
+    width: 60px;
+    transform: rotate(90deg);
+    margin-top: 130px;
+    padding: 12px;
+    border-radius: 100px;
+    filter: invert(100);
+    transition: 0.2s;
+}
+
+.AccueilSectionHeadFlechesScroll:hover {
+    width: 60px;
+    filter: invert(0);
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
+    border: solid 2px rgb(155, 155, 155);
+    transform: rotate(-270deg);
+}
+
+
+/* ------------------------------ SECTION ACTUALITE ------------------------------ */
+
+#AccueilSectionActualités {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-bottom: 170px;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+#AccueilTitreSectionActualités {
+    margin-top: 170px;
+    width: 80%;
+    margin-bottom: 8px;
+}
+
+#AccueilTitreSectionActualités a{
+    font-family: 'Whitney Book Regular';
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(55, 168, 213);
+    padding: 13px;
+}
+
+/* Debut : UNE Actualité */
+
+.ActualitéAccueil {
+    height: 500px;
+    display: flex;
+    flex: 1 0 100%;
+    transition: 0.5s;
+}
+
+.FlechesActualitéSlide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    margin: 40px;
+    padding: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    border: solid 2px rgb(155, 155, 155);
+}
+
+.flecheActualitéDroite {
+    right: 60px;
+    transform: rotateY(3.142rad);
+}
+
+.FlechesActualitéSlide:hover {
+    background-color: rgb(240, 240, 240);
+    border: solid 2px rgb(105, 167, 101);
+    cursor: pointer;
+}
+
+.ImageActualitéAccueil {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 4;
+}
+
+.Image1ActuAccueil {
+    background-image: url("../images/BasseTerreHighView.jpg");
+}
+.Image2ActuAccueil {
+    background-image: url("../images/BasseTerrePicture1.jpg");
+}
+.Image3ActuAccueil {
+    background-image: url("../images/BasseTerreAccueil.jpg");
+}
+
+.TexteAcutalitéAccueil {
+    padding: 10px;
+    flex: 3;
+    background-color: #fff;
+}
+
+.ActualitéAccueil p { /* Catégorie */
+    margin: 15px;
+    font-family: 'Whitney Book Italic';
+    font-size: 20px;
+    text-align: left;
+    color: orange;
+}
+
+.ActualitéAccueil h1 { /* Titre */
+    margin: 18px;
+    font-family: 'Whitney Medium';
+    font-size: 33px;
+    text-align: center;
+}
+
+.ActualitéAccueil h2 { /* Details */
+    margin: 18px;
+    font-family: 'Whitney Bold';
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+}
+
+.EnSavoirPlusAccueil { /* En Savoir Plus */
+    margin: 0px 0px 0px 15px;
+    font-family: 'Whitney Bold';
+    font-size: 16px;
+    text-align: left;
+    color: green;
+}
+
+.EnSavoirPlusTrait {
+    margin: 3px 0px 0px 15px;
+    background-color: rgba(0, 128, 0, 0.544);
+    width: 50px;
+    height: 2px;
+    transition: 0.2s;
+}
+
+.EnsavoirPlusTraitHover{
+    margin: 3px 0px 0px 15px;
+    background-color: rgb(0, 128, 0);
+    width: 110px;
+    height: 2px;
+}
+
+/* FIN : UNE Actualité */
+
+/* ------------------------------ SECTION OU NOUS TROUVER ------------------------------ */
+
+#AccueilSectionOuNousTrouver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/MapBasseTerreBleue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 394px;
+    margin-bottom: 340px;
+}
+
+#AccueilSectionOuNousTrouver h1, #AccueilSectionOuNousTrouver p {
+    font-family: 'Whitney Bold';
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
+    padding: 10px 0px 10px 0px;
+    width: 80%;
+}
+
+#AccueilSectionOuNousTrouver p {
+    font-family: 'Whitney Bold';
+    letter-spacing: 4px;
+    font-size: 17px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.802);
+}
+
+#AccueilSectionOuNousTrouver a{
+    font-family: 'Whitney Bold';
+    background-color: rgb(56, 219, 41);
+    width: fit-content;
+    padding: 10px 35px 10px 35px;
+    font-size: 1.4em;
+    color: #fff;
+    border-radius: 3px;
+    margin: 40px 0px 0px 0px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.202);
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+    /* ----------- TETE DE PAGE ----------- */
+    #AccueilSectionHead h1 {
+        font-size: 57px;
+    }
+    #AccueilSectionHead h2 {
+        font-size: 18px;
+    }
+    /* ----------- ACTUALITES ----------- */
+    .ActualitéAccueil p { /* Catégorie */
+        font-size: 16px;
+    }
+    .ActualitéAccueil h1 { /* Titre */
+        font-size: 27px;
+    }
+    .ActualitéAccueil h2 { /* Details */
+        font-size: 18px;
+    }
+    /* ----------- Ou Nous Trouver ----------- */
+    #AccueilSectionOuNousTrouver h1 {
+        font-size: 28px;
+    }
+    #AccueilSectionOuNousTrouver p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* ----------- TETE DE PAGE ----------- */
+    #AccueilSectionHead h1 {
+        font-size: 50px;
+    }
+    #AccueilSectionHead h2 {
+        font-size: 14px;
+    }
+    /* ----------- ACTUALITES ----------- */
+    #AccueilTitreSectionActualités a {
+        font-size: 15px;
+    }
+
+    .ActualitéAccueil {
+        height: 500px;
+        flex-direction: column;
+    }
+    
+    .ActualitéAccueil h1 { /* Titre */
+        font-size: 22px;
+        text-align: left;
+    }
+    
+    .ActualitéAccueil h2 { /* Details */
+        font-size: 15px;
+    }
+    
+    .EnSavoirPlusAccueil { /* En Savoir Plus */
+        font-size: 15px;
+    }
+    .FlechesActualitéSlide {
+        width: 34px;
+        bottom: -20px;
+        margin-right: 25px;
+        margin-bottom: 35px;
+    }
+    .flecheActualitéDroite {
+        right: 50px;
+    }
+    /* ----------- Ou Nous Trouver ----------- */
+    #AccueilSectionOuNousTrouver h1 {
+        font-size: 20px;
+    }
+    #AccueilSectionOuNousTrouver p {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    /* ----------- TETE DE PAGE ----------- */
+    #AccueilSectionHead h1 {
+        font-size: 37px;
+    }
+    #AccueilSectionHead h2 {
+        font-size: 12px;
+    }
+    /* ----------- ACTUALITES ----------- */
+    .ActualitéAccueil p { /* Catégorie */
+        font-size: 13px;
+    }
+    .ActualitéAccueil h1 { /* Titre */
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .ActualitéAccueil h2 { /* Details */
+        font-size: 12px;
+    }
+    
+    .EnSavoirPlusAccueil { /* En Savoir Plus */
+        font-size: 13px;
+    }
+    .EnsavoirPlusTraitHover{
+        width: 90px;
+    }
+    .FlechesActualitéSlide {
+        width: 28px;
+        bottom: -30px;
+        margin-right: 17px;
+        margin-bottom: 45px;
+    }
+    .flecheActualitéDroite {
+        right: 40px;
+    }
+    /* ----------- Ou Nous Trouver ----------- */
+    #AccueilSectionOuNousTrouver a{
+        font-size: 1.1em;
+    }
+}
